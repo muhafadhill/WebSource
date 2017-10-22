@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical"
+	tools:context="id.fadhil.websource.MainActivity"
+	android:background="#bf45bdfd">
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content">
+
+			<TextView
+				android:id="@+id/tv_url"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="10dp"
+				android:layout_marginTop="10dp"
+				android:gravity="right"
+				android:minWidth="70dp"
+				android:textColor="#000"
+				android:textSize="20sp"/>
+
+			<EditText
+				android:id="@+id/edt_url"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_alignParentTop="true"
+				android:layout_marginRight="10dp"
+				android:layout_marginTop="10dp"
+				android:hint="Masukkan URL"
+				android:inputType="textUri"
+				android:padding="10dp"/>
+		</LinearLayout>
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:gravity="center">
+
+			<Spinner
+				android:id="@+id/spinner"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:layout_weight="1"
+				android:background="@drawable/background_spinner"
+				android:visibility="visible"/>
+
+			<Button
+				android:id="@+id/btn_reset"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:text="reset"/>
+
+			<Button
+				android:id="@+id/btn_showCode"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_margin="10dp"
+				android:text="Tampilkan"/>
+		</LinearLayout>
+	</LinearLayout>
+
+	<ScrollView
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_weight="1"
+		android:padding="10dp">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:padding="10dp">
+
+			<TextView
+				android:id="@+id/tv_sourceCode"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:visibility="gone"
+				android:padding="10dp"
+				android:background="#fff"/>
+
+			<Button
+				android:id="@+id/btn_refresh"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_below="@id/tv_sourceCode"
+				android:layout_centerInParent="true"
+				android:text="Refresh"
+				android:visibility="gone"/>
+		</RelativeLayout>
+	</ScrollView>
+
+</LinearLayout>
